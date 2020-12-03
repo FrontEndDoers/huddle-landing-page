@@ -1,0 +1,47 @@
+.container {
+  display: grid;
+  height: 100vh;
+  grid-gap: 10px;
+  grid-template-areas:
+   "footer"
+   "header"
+   "section"
+   "aside";
+  grid-template-rows: 1fr 10fr 1fr 1fr;
+}
+
+.container > * {
+  background-color: rebeccapurple;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media(min-width: 600px) {
+  .container {
+    grid-template-areas:
+    "header header"
+    "aside section"    
+    "footer footer";
+    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-columns: 1fr 6fr;
+  }
+}
+
+header {
+  grid-area: header;
+}
+
+section {
+  grid-area: section;
+}
+
+footer {
+  grid-area: footer;
+}
+
+aside {
+  grid-area: aside;
+}

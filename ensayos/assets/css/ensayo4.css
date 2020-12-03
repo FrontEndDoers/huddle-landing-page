@@ -1,0 +1,31 @@
+.container {
+  display:grid;
+  height: 100vh;
+  grid-gap: 15px;
+  grid-template-columns: 
+    [left-sidebar-start] 1fr
+    [left-sidebar-end main-content-start] 2fr
+    [main-content-end right-sidebar-start] 1fr
+    [rigt-sidebar-end];
+  grid-template-rows:
+    [body-start] 6fr
+    [footer-start] 6fr
+    [footer-end]
+}
+
+.container > * {
+  background-color: peachpuff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer {
+  grid-column: main-content-start / right-sidebar-end;
+}
+
+.left-sidebar {
+  grid-row: body-start / footer-end;
+}
